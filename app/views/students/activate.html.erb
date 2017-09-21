@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% if @student.active == false %>
+      <% @student.active = true%>
+    <% else %>
+      <% @student.active = false%>
+    <% end %>
+    <%@student.save%>
+    <script type="text/javascript">
+   	// Javascript URL redirection
+    window.location.replace("http://localhost:3000/students");
+    </script>
+  </body>
+</html>
